@@ -1,8 +1,6 @@
 //
 // import 'dart:html';
 // import 'dart:ui';
-import 'dart:ui';
-
 import 'package:coinskash/home_background.dart';
 import 'package:coinskash/recent_transaction.dart';
 import 'package:flutter/material.dart';

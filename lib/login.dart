@@ -4,6 +4,7 @@ import 'package:coinskash/home_page.dart';
 import 'package:coinskash/phone.dart';
 import 'package:flutter/material.dart';
 import 'email_login.dart';
+import 'verify_code.dart';
 
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
@@ -150,7 +151,8 @@ class _LoginState extends State<Login> {
                 ),
                 GestureDetector(
                   onTap: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (BuildContext context)=>HomePage()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (BuildContext context)=>Verify()));
                   },
                   child: Container(
                     height: 50,
@@ -178,7 +180,9 @@ class _LoginState extends State<Login> {
                     ),
                     TextButton(
                       onPressed: () {
-                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context)=>CreateAccount()));
+                        Navigator.pushReplacement(context,
+                            MaterialPageRoute(builder:
+                                (BuildContext context)=>CreateAccount()));
                       },
                       child: Text('Create account',
                         style: TextStyle(

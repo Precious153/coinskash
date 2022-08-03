@@ -377,18 +377,23 @@ class _CreateAccountState extends State<CreateAccount> {
               SizedBox(
                 height: 30,
               ),
-              Container(
-                height: 50,
-                width: 335,
-                decoration: BoxDecoration(
-                  borderRadius:BorderRadius.circular(10),
-                  color: Color(0xff604AED),
+              GestureDetector(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (BuildContext context)=>Login()));
+                },
+                child: Container(
+                  height: 50,
+                  width: 335,
+                  decoration: BoxDecoration(
+                    borderRadius:BorderRadius.circular(10),
+                    color: Color(0xff604AED),
+                  ),
+                  child: Center(child: Text('Create account',
+                    style: TextStyle(
+                        fontSize: 16,
+                        color: Colors.white
+                    ),)),
                 ),
-                child: Center(child: Text('Create account',
-                  style: TextStyle(
-                      fontSize: 16,
-                      color: Colors.white
-                  ),)),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -402,7 +407,8 @@ class _CreateAccountState extends State<CreateAccount> {
                   ),
                   TextButton(
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (BuildContext context)=>Login()));
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (BuildContext context)=>Login()));
                     },
                     child: Text('Log in',
                       style: TextStyle(
